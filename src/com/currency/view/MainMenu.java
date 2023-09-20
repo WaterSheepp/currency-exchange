@@ -74,32 +74,25 @@ public class MainMenu {
 		}
 		
 		CurrencyRates currency2 = new CurrencyRates("","",0);
-		CurrencyRates currencyName = new CurrencyRates(" "," ",0);
 		
 		switch (outputCurrency) {
 			case "Dollar":
 				currency2 = c.dollar;
-				currencyName = c.dollar;
 				break;
 			case "Euro":
 				currency2 = c.euro;
-				currencyName = c.euro;
 				break;
 			case "Libra Esterlina":
 				currency2 = c.libraEst;
-				currencyName = c.libraEst;
 				break;
 			case "Japanese Yen":
 				currency2 = c.jpnYen;
-				currencyName = c.jpnYen;
 				break;
 			case "Korean Won":
 				currency2 = c.korWon;
-				currencyName = c.korWon;
 				break;
 			case "QTZ":
 				currency2 = c.qtz;
-				currencyName = c.qtz;
 				break;
 		}
 		
@@ -112,7 +105,7 @@ public class MainMenu {
 	
 	public static void mainMenu() {
 		
-		Object[] possibleValues = { "Currency Exchange Rates", "wip"};
+		Object[] possibleValues = { "Currency Exchange Rates"};
 		
 		Object selectedValue = JOptionPane.showInputDialog(null,
 	             "Choose one", "Conversor Type",
@@ -125,9 +118,10 @@ public class MainMenu {
 			
 		} else {
 		
-		JOptionPane.showMessageDialog(null, "gud day");	
-		
-	}	
+		JOptionPane.showMessageDialog(null, "Closing App");
+		Runtime.getRuntime().exit(0);
+	}
+	
 }
 	
 	public static void main(String[] args) {
