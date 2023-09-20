@@ -2,35 +2,35 @@ package com.currency.model;
 
 public class CurrencyRates {
 	
-	protected double qtz = 1;
-	protected double dollar = 0.13;
-	protected double eur = 0.11;
-	protected double libEst = 0.098;
-	protected double jpnYen = 17.76;
-	protected double korWon = 161.79;
+	private String name;
+	private String simbol;
+	private double value;
 	
-	public double getQtz() {
-		return qtz;
+	public CurrencyRates(String name, String simbol, double value) {
+		this.name = name;
+		this.simbol = simbol;
+		this.value = value;
 	}
-	
-	public void setQtz(double qtz) {
-		this.qtz = qtz;
+
+	public String getNombre() {
+		return name;
 	}
-	
-	public double getDollar() {
-		return dollar;
+
+	public String getSimbolo() {
+		return simbol;
 	}
-	public double getEur() {
-		return eur;
-	}
-	public double getLibEst() {
-		return libEst;
-	}
-	public double getJpnYen() {
-		return jpnYen;
-	}
-	public double getKorWon() {
-		return korWon;
+
+	public double getValor() {
+		return value;
 	}
 	
+	public double multiplicar(double numero) {
+	    return this.value * numero;
+	}
+
+	public double dividir(double numero) {
+		return this.value / numero;
+	}
+	  
+
 }
